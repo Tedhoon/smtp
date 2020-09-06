@@ -1,0 +1,1 @@
+html format을 설정하기 위해서는 MIMEMultipart, MIMEText를 사용해야하는 것 같다.
