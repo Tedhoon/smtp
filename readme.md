@@ -41,7 +41,9 @@ subject = 'hello!!!!!!!!!'
 from_email = None
 to = ['gt0305@likelion.org', 'gt0305@naver.com']
 text_content = 'This is an important message.'
-html_content = '<p>This is an <strong>important</strong> message.</p>'
+html_content = """\
+<p>This is an <strong>important</strong> message.</p>
+"""
 msg = EmailMultiAlternatives(subject, text_content, from_email, to)
 msg.attach_alternative(html_content, "text/html")
 msg.send()
