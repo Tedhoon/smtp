@@ -32,3 +32,17 @@ from django.core.mail import EmailMessage
 email = EmailMessage('제목', '내용', to=['gt0305@likelion.org'])
 email.send()
 ```
+
+_html format으로도 보내보자_
+```python
+from django.core.mail import EmailMultiAlternatives
+
+subject = 'hello!!!!!!!!!'
+from_email = None
+to = ['gt0305@likelion.org', 'gt0305@naver.com']
+text_content = 'This is an important message.'
+html_content = '<p>This is an <strong>important</strong> message.</p>'
+msg = EmailMultiAlternatives(subject, text_content, from_email, to)
+msg.attach_alternative(html_content, "text/html")
+msg.send()
+```
